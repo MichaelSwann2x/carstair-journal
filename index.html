@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CARSTAIR Pro — Trading Journal</title>
+  <meta name="description" content="Carstair Pro — clean trading journal with Liquid Glass design. Track trades, prop accounts, and performance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo-mark">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+          <rect x="3" y="14" width="3.5" height="7" rx="1" fill="currentColor"/>
+          <rect x="8.5" y="9" width="3.5" height="12" rx="1" fill="currentColor"/>
+          <rect x="14" y="4" width="3.5" height="17" rx="1" fill="currentColor"/>
+          <rect x="19.5" y="1" width="3.5" height="20" rx="1" fill="currentColor"/>
+        </svg>
+      </div>
+      <span class="brand-name">CARSTAIR <span class="pro">Pro</span></span>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-item active" data-view="dashboard">Dashboard</button>
+      <button class="nav-item" data-view="journal">Journal</button>
+      <button class="nav-item" data-view="analytics">Analytics</button>
+      <button class="nav-item" data-view="prop">Prop Firm</button>
+      <button class="nav-item" data-view="study">Study</button>
+    </nav>
+
+    <div class="top-actions">
+      <button id="glassToggle" class="glass-btn" title="Toggle Liquid Glass">
+        <span class="glass-icon">◇</span>
+        <span class="glass-label">Liquid Glass</span>
+      </button>
+      <div class="avatar">@carstair</div>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- DASHBOARD VIEW -->
+    <section id="view-dashboard" class="view active">
+      <div class="page-header">
+        <div>
+          <h1>Dashboard</h1>
+          <p class="subtitle">US100 · 12 Nov 2026</p>
+        </div>
+        <div class="header-stats">
+          <div class="stat-pill positive">+$67.36 today</div>
+          <div class="stat-pill">1 open</div>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <!-- Hero Trade Card (matches uploaded image) -->
+        <div class="card trade-hero glassable">
+          <div class="trade-hero-header">
+            <div class="logo-mark small">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="14" width="3.5" height="7" rx="1" fill="currentColor"/>
+                <rect x="8.5" y="9" width="3.5" height="12" rx="1" fill="currentColor"/>
+                <rect x="14" y="4" width="3.5" height="17" rx="1" fill="currentColor"/>
+                <rect x="19.5" y="1" width="3.5" height="20" rx="1" fill="currentColor"/>
+              </svg>
+            </div>
+            <span class="pro-badge">CARSTAIR <span>Pro</span></span>
+          </div>
+
+          <h2 class="trade-title">US100 Long</h2>
+
+          <div class="pnl-bar positive">
+            <span>+$67.36</span>
+          </div>
+
+          <div class="trade-meta">
+            <div class="meta-row">
+              <span class="label">PNL</span>
+              <span class="value positive">+0.67%</span>
+            </div>
+            <div class="meta-row">
+              <span class="label">Invested</span>
+              <span class="value">$10,072.04</span>
+            </div>
+            <div class="meta-row">
+              <span class="label">Position</span>
+              <span class="value">$10,139.40</span>
+            </div>
+          </div>
+
+          <div class="trade-footer">
+            <div class="user-chip">
+              <div class="chip-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="14" width="3.5" height="7" rx="1" fill="currentColor"/>
+                  <rect x="8.5" y="9" width="3.5" height="12" rx="1" fill="currentColor"/>
+                  <rect x="14" y="4" width="3.5" height="17" rx="1" fill="currentColor"/>
+                  <rect x="19.5" y="1" width="3.5" height="20" rx="1" fill="currentColor"/>
+                </svg>
+              </div>
+              <span>@carstair</span>
+            </div>
+            <a href="#" class="tracker-link">carstair.com/program/tracker</a>
+          </div>
+        </div>
+
+        <!-- Liquid Score -->
+        <div class="card glassable">
+          <h3 class="card-title">Liquid Score</h3>
+          <div class="score-ring">
+            <svg viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="52" class="ring-bg"/>
+              <circle cx="60" cy="60" r="52" class="ring-fill" stroke-dasharray="280" stroke-dashoffset="70"/>
+            </svg>
+            <div class="score-value">89</div>
+          </div>
+          <p class="score-note">Weakest spoke: win rate 76</p>
+          <div class="score-spokes">
+            <div class="spoke"><span>Win Rate</span><b>76</b></div>
+            <div class="spoke"><span>Profit Factor</span><b>2.1</b></div>
+            <div class="spoke"><span>Avg R</span><b>1.4</b></div>
+            <div class="spoke"><span>Consistency</span><b>91</b></div>
+            <div class="spoke"><span>Discipline</span><b>88</b></div>
+          </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="card glassable">
+          <h3 class="card-title">This Week</h3>
+          <div class="week-stats">
+            <div class="week-item">
+              <span class="w-label">Net P&L</span>
+              <span class="w-value positive">+$412.80</span>
+            </div>
+            <div class="week-item">
+              <span class="w-label">Trades</span>
+              <span class="w-value">7</span>
+            </div>
+            <div class="week-item">
+              <span class="w-label">Win Rate</span>
+              <span class="w-value">71%</span>
+            </div>
+            <div class="week-item">
+              <span class="w-label">Best Day</span>
+              <span class="w-value positive">+$189</span>
+            </div>
+          </div>
+          <div class="mini-calendar">
+            <div class="day positive">M</div>
+            <div class="day positive">T</div>
+            <div class="day neutral">W</div>
+            <div class="day positive">T</div>
+            <div class="day positive">F</div>
+            <div class="day">S</div>
+            <div class="day">S</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Trades -->
+      <div class="section">
+        <div class="section-header">
+          <h2>Recent Trades</h2>
+          <button class="btn-ghost">View all</button>
+        </div>
+        <div class="trades-grid" id="recentTrades">
+          <!-- filled by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURNAL VIEW -->
+    <section id="view-journal" class="view">
+      <div class="page-header">
+        <div>
+          <h1>Journal</h1>
+          <p class="subtitle">Every trade on the tape it happened on</p>
+        </div>
+        <button class="btn-primary" id="addTradeBtn">+ Log Trade</button>
+      </div>
+
+      <div class="filters">
+        <button class="chip active">All</button>
+        <button class="chip">Wins</button>
+        <button class="chip">Losses</button>
+        <button class="chip">US100</button>
+        <button class="chip">NQ</button>
+        <button class="chip">A+</button>
+      </div>
+
+      <div class="journal-list" id="journalList">
+        <!-- filled by JS -->
+      </div>
+    </section>
+
+    <!-- ANALYTICS VIEW -->
+    <section id="view-analytics" class="view">
+      <div class="page-header">
+        <div>
+          <h1>Analytics</h1>
+          <p class="subtitle">The same trades, asked harder questions</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card glassable">
+          <h3 class="card-title">Overview</h3>
+          <div class="big-stats">
+            <div>
+              <div class="big-number positive">+$16,005</div>
+              <div class="big-label">Total P&L</div>
+            </div>
+            <div>
+              <div class="big-number">56.0%</div>
+              <div class="big-label">Win Rate</div>
+            </div>
+            <div>
+              <div class="big-number">2.07</div>
+              <div class="big-label">Profit Factor</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card glassable">
+          <h3 class="card-title">By Setup</h3>
+          <div class="setup-list">
+            <div class="setup-row">
+              <span>Killzone Sweep</span>
+              <div class="setup-bar"><div style="width:78%"></div></div>
+              <b>78%</b>
+            </div>
+            <div class="setup-row">
+              <span>Manipulation</span>
+              <div class="setup-bar"><div style="width:71%"></div></div>
+              <b>71%</b>
+            </div>
+            <div class="setup-row">
+              <span>Opening Drive</span>
+              <div class="setup-bar"><div style="width:62%"></div></div>
+              <b>62%</b>
+            </div>
+            <div class="setup-row">
+              <span>Break & Retest</span>
+              <div class="setup-bar"><div style="width:48%"></div></div>
+              <b>48%</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROP FIRM VIEW -->
+    <section id="view-prop" class="view">
+      <div class="page-header">
+        <div>
+          <h1>Prop Firm</h1>
+          <p class="subtitle">Every account on one desk</p>
+        </div>
+        <button class="btn-primary">+ Add Account</button>
+      </div>
+
+      <div class="prop-grid">
+        <div class="card prop-card glassable">
+          <div class="prop-header">
+            <span class="firm">Apex 50K</span>
+            <span class="status funded">Funded</span>
+          </div>
+          <div class="prop-pnl positive">+$1,840</div>
+          <div class="prop-meta">
+            <div><span>Drawdown left</span><b>$2,160</b></div>
+            <div><span>Consistency</span><b>OK</b></div>
+            <div><span>Days to payout</span><b>3</b></div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width:68%"></div>
+          </div>
+        </div>
+
+        <div class="card prop-card glassable">
+          <div class="prop-header">
+            <span class="firm">Topstep 150K</span>
+            <span class="status eval">Evaluation</span>
+          </div>
+          <div class="prop-pnl positive">+$3,210</div>
+          <div class="prop-meta">
+            <div><span>Profit target</span><b>$9,000</b></div>
+            <div><span>Max DD</span><b>$4,500 left</b></div>
+            <div><span>Trading days</span><b>8 / 5</b></div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width:36%"></div>
+          </div>
+        </div>
+
+        <div class="card prop-card glassable">
+          <div class="prop-header">
+            <span class="firm">Lucid Daily 25K</span>
+            <span class="status funded">Funded</span>
+          </div>
+          <div class="prop-pnl positive">+$620</div>
+          <div class="prop-meta">
+            <div><span>Daily loss left</span><b>$480</b></div>
+            <div><span>EOD limit</span><b>$600</b></div>
+            <div><span>Green days</span><b>2 / 3</b></div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width:55%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDY VIEW -->
+    <section id="view-study" class="view">
+      <div class="page-header">
+        <div>
+          <h1>Study Room</h1>
+          <p class="subtitle">Trade alone and YouTube becomes your mentor</p>
+        </div>
+      </div>
+      <div class="card glassable study-placeholder">
+        <p>Paste a YouTube link, take timestamped notes, build study boards.</p>
+        <p class="muted">Coming next — folders, boards, and AI takeaways.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal: Log Trade -->
+  <div id="tradeModal" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content glassable">
+      <h2>Log Trade</h2>
+      <form id="tradeForm">
+        <div class="form-row">
+          <label>Symbol</label>
+          <input type="text" name="symbol" value="US100" required />
+        </div>
+        <div class="form-row">
+          <label>Direction</label>
+          <select name="side">
+            <option value="Long">Long</option>
+            <option value="Short">Short</option>
+          </select>
+        </div>
+        <div class="form-row two">
+          <div>
+            <label>Entry</label>
+            <input type="number" step="0.01" name="entry" required />
+          </div>
+          <div>
+            <label>Exit</label>
+            <input type="number" step="0.01" name="exit" required />
+          </div>
+        </div>
+        <div class="form-row two">
+          <div>
+            <label>P&L ($)</label>
+            <input type="number" step="0.01" name="pnl" required />
+          </div>
+          <div>
+            <label>R-Multiple</label>
+            <input type="number" step="0.01" name="r" value="1.0" />
+          </div>
+        </div>
+        <div class="form-row">
+          <label>Grade</label>
+          <select name="grade">
+            <option>A+</option>
+            <option selected>A</option>
+            <option>B</option>
+            <option>C</option>
+            <option>F</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>Setup</label>
+          <input type="text" name="setup" placeholder="Killzone Sweep" />
+        </div>
+        <div class="form-row">
+          <label>Emotions</label>
+          <input type="text" name="emotions" placeholder="patient, focused, disciplined" />
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn-ghost" id="cancelTrade">Cancel</button>
+          <button type="submit" class="btn-primary">Save Trade</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
